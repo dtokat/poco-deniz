@@ -1,5 +1,5 @@
 Merhaba
 ikinci satir
-ucuncu satir
+ucuncu
 Son satir
 Sonuc bolumu olsun...
