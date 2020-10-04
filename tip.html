@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>This is about tip calculation:</h2>
+    <label>What is the bill: </label>
+    <input id="bill" type="text" />
+    <label>Tip rate (%)</label>
+    <input id="rate" type="text" />
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+    <script>
+      function calculate() {
+        var billAmount = document.getElementById("bill").value;
+        var tipRate = document.getElementById("rate").value;
+        var totalTip = (billAmount * tipRate) / 100;
+        var tex = document.getElementById("result");
+        var total = Number(billAmount) + totalTip;
+        tex.innerHTML =
+          "Please pay CHF " +
+          Math.round((totalTip: 2)) +
+          " as tip, and now the total bill amount is CHF " +
+          total +
+          ". Thanks!";
+      }
+    </script>
+  </body>
+</html>
