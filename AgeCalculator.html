@@ -1,0 +1,38 @@
+<!-- Exercise: Age calculator Improve your age calculator by using a function First
+have a look at your versions with month input Then change that to using a
+function Call that function several times -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>This is an age calculator!</h3>
+    <label>Enter your birth year: </label>
+    <input id="birthYear" type="text" />
+    <label>Enter your birth month: </label>
+    <input id="birthMonth" type="number" />
+    <button onclick="calculate()">Submit</button>
+    <p id="result"></p>
+    <script>
+      function calculate() {
+        var d = new Date();
+        var currentYear = d.getFullYear();
+        var currentMonth = d.getMonth();
+
+        var birthYear = document.getElementById("birthYear").value;
+        var birthMonth = document.getElementById("birthMonth").value;
+        var d1 = new Date(birthYear, birthMonth, 1);
+        var age = currentYear - birthYear;
+        if (currentMonth < birthMonth) {
+          age--;
+        }
+
+        document.write("You are " + age + " years old.");
+      }
+    </script>
+  </body>
+</html>

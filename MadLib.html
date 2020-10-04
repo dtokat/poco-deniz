@@ -1,0 +1,50 @@
+<!-- Exercise: Mad Lib Turn your Mad Lib pseudocode into JavaScript: Create a simple
+mad-lib program that prompts for a noun, a verb, an adverb, and an adjective and
+injects those into a story that you create. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>This is Mad Lib game:</h2>
+    <h4>
+      "We are what we repeatedly do. Excellence, then, is not an act, but a
+      habit." – Aristotle
+    </h4>
+    <label>Enter a noun: </label>
+    <input id="noun" type="text" />
+    <label>Enter an adjective: </label>
+    <input id="adj" type="text" />
+    <label>Enter an adverb: </label>
+    <input id="adv" type="text" />
+    <label>Enter a verb: </label>
+    <input id="verb" type="text" />
+    <button onclick="change()">Change</button>
+    <p id="result"></p>
+    <script>
+      function change() {
+        var noun = document.getElementById("noun").value;
+        var adj = document.getElementById("adj").value;
+        var adv = document.getElementById("adv").value;
+        var verb = document.getElementById("verb").value;
+
+        var tex = document.getElementById("result");
+
+        tex.innerHTML =
+          "We are what we " +
+          adv +
+          " " +
+          verb +
+          ". " +
+          noun +
+          ", then, is not an act, but " +
+          adj +
+          ". – Mad Lib";
+      }
+    </script>
+  </body>
+</html>
