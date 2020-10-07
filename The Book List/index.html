@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Book List</h1>
+    <script>
+      var books = [
+        {
+          title: "The Design of EveryDay Things",
+          author: "Don Norman",
+          alreadyRead: false,
+        },
+        {
+          title: "The Most Human Human",
+          author: "Brian Christian",
+          alreadyRead: true,
+        },
+      ];
+      for (let index = 0; index < books.length; index++) {
+        var bookItem = document.createElement("p");
+        var bookProp = document.createTextNode(
+          books[index].title +
+            " " +
+            books[index].author +
+            " " +
+            books[index].alreadyRead
+        );
+        bookItem.appendChild(bookProp);
+        document.body.appendChild(bookItem);
+      }
+    </script>
+  </body>
+</html>
