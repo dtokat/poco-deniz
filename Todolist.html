@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>javascript</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var List = {
+        name: "Feed The Cat",
+        date: "10-05-2020",
+        status: "Will be done",
+      };
+      var Todolist = [];
+      Todolist.push(List);
+      console.log(Todolist);
+      function myFunction(object, l) {
+        l.push(object);
+      }
+      var List2 = {
+        name: "Shopping",
+        date: "11-05-2020",
+        status: "Done",
+      };
+      myFunction(List2, Todolist);
+      console.log(Todolist);
+    </script>
+  </body>
+</html>

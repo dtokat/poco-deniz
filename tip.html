@@ -1,18 +1,44 @@
+<!-- This page is designed for tip calculation. It is also responsive. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+        background-color: lightseagreen;
+        font-size: 1em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        padding: 10vh 0 2vh 0;
+      }
+      @media screen and (max-width: 500px) {
+        html {
+          display: flex;
+          flex-direction: columns;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h2>This is about tip calculation:</h2>
-    <label>What is the bill: </label>
-    <input id="bill" type="text" />
-    <label>Tip rate (%)</label>
-    <input id="rate" type="text" />
-    <button onclick="calculate()">Calculate</button>
-    <p id="result"></p>
+    <h2>This page calculates the tip for you:</h2>
+    <section>
+      <label>What is the bill: </label> <input id="bill" type="text" />
+    </section>
+    <section>
+      <label>Tip rate (%)</label>
+      <input id="rate" type="text" />
+      <button onclick="calculate()">Calculate</button>
+      <p id="result"></p>
+    </section>
     <script>
       function calculate() {
         var billAmount = document.getElementById("bill").value;
@@ -22,7 +48,7 @@
         var total = Number(billAmount) + totalTip;
         tex.innerHTML =
           "Please pay CHF " +
-          Math.round((totalTip: 2)) +
+          Math.round(totalTip) +
           " as tip, and now the total bill amount is CHF " +
           total +
           ". Thanks!";

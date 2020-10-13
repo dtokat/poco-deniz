@@ -1,0 +1,68 @@
+<!-- Exercise: What number is bigger? Write a function named greaterNum that: Takes 2
+arguments, both numbers. Returns whichever number is the greater (higher)
+number. Call that function 2 times with different number pairs Log the output,
+e.g. "The greater number of 5 and 10 is 5." -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+      }
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        padding: 10em 0 2em 0;
+        color: darkcyan;
+        text-align: center;
+      }
+      main {
+        /* width: 70vw; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      p {
+        color: brown;
+        display: flex;
+        justify-content: flex-end;
+      }
+      section {
+        color: coral;
+        text-align: center;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>This program finds the greater number!</h2>
+    <main>
+      <p><label>Enter a number: </label> <input id="num1" type="text" /></p>
+      <p>
+        <label>Enter another number: </label> <input id="num2" type="text" />
+      </p>
+      <p><button onclick="greaterNum()">Submit</button></p>
+    </main>
+    <section id="result"></section>
+    <script>
+      function greaterNum() {
+        var number1 = document.getElementById("num1").value;
+        var number2 = document.getElementById("num2").value;
+        var text = document.getElementById("result");
+        if (number1 > number2) {
+          text.innerHTML = `The greater number of ${number1} and ${number2} is ${number1}.`;
+        } else if (number2 > number1) {
+          text.innerHTML = `The greater number of ${number1} and ${number2} is ${number2}.`;
+        } else {
+          text.innerHTML = "They are equal.";
+        }
+      }
+    </script>
+  </body>
+</html>

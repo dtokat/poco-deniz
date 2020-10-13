@@ -1,0 +1,31 @@
+<!-- Exercise: The world translator Write a function named helloWorld that: Takes 1
+argument, a language code (e.g. "es", "de", "en") Returns "Hello, World" for the
+given language, for at least 3 languages. It should default to returning
+English. Call that function for each of the supported languages and log the
+result to make sure it works -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Enter a language code(en,de,es): </label>
+    <input id="lang" type="text" />
+    <button onclick="helloWorld()">Submit</button>
+    <p id="result"></p>
+    <script>
+      function helloWorld(lang) {
+        var lang = document.getElementById("lang").value;
+        if (lang === "de") {
+          document.write("Hallo, Welt!");
+        } else if (lang === "es") {
+          document.write("¡Hola, Mundo!");
+        } else {
+          document.write("Hello, World!");
+        }
+      }
+    </script>
+  </body>
+</html>
